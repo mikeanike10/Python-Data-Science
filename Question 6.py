@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jun 14 12:28:36 2023
+
+@author: Michael Glass
+CS 677
+Question 6
+Oracle has 3 scenarios that will change the final result we make, learn what they would be
+"""
+
+
+ #1 
+ #GAB
+ p=[] #empty list for all positive values
+ n=[] #empty list for all negative values
+ for i in range(1,len(linesGAB)): #determines if value is positive or negative and appends to associated one
+     t=linesGAB[i].split(",")
+     if eval(t[r])>0: 
+         p.append(eval(t[r]))
+     elif eval(t[r])<0:
+         n.append(eval(t[r]))
+ p.sort(reverse=True) #orders values to put highest on top
+ n.sort() #orders values to put lowest on top
+ 
+ #scenario a
+ a=[]
+ a.extend(p[10:len(p)])
+     
+ #scenario b
+ b=[]
+ b.extend(n[0:10])
+ b.extend(p)
+ 
+ #scenario c
+ c=[]
+ c.extend(n[0:5])
+ c.extend(p[5:len(p)])
+     
+ #a
+ s=100
+ for i in a:
+     s=s+s*(i)
+ print("Money made is",s) #15,441.93
+ 
+ #b
+ s=100
+ for i in b:
+     s=s+s*(i)
+ print("Money made is",s) #13181.75
+ 
+ #c
+ s=100
+ for i in c:
+     s=s+s*(i)
+ print("Money made is",s)  #10,386.94
+ 
+ #SPY
+ p=[] #empty list for all positive values
+ n=[] #empty list for all negative values
+ for i in range(1,len(linesSPY)): #determines if value is positive or negative and appends to associated one
+     t=linesSPY[i].split(",")
+     if eval(t[r])>0: 
+         p.append(eval(t[r]))
+     elif eval(t[r])<0:
+         n.append(eval(t[r]))
+ p.sort(reverse=True) #orders values to put highest on top
+ n.sort() #orders values to put lowest on top
+ 
+ #scenario a
+ a=[]
+ a.extend(p[10:len(p)])
+     
+ #scenario b
+ b=[]
+ b.extend(n[0:10])
+ b.extend(p)
+ 
+ #scenario c
+ c=[]
+ c.extend(n[0:5])
+ c.extend(p[5:len(p)])
+     
+ #a
+ s=100
+ for i in a:
+     s=s+s*(i)
+ print("Money made is",s) #7841.70
+ 
+ #b
+ s=100
+ for i in b:
+     s=s+s*(i)
+ print("Money made is",s) #7406.08
+ 
+ #c
+ s=100
+ for i in c:
+     s=s+s*(i)
+print("Money made is",s)  #7278.48
+ 
